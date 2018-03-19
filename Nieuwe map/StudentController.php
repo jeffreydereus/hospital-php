@@ -4,7 +4,7 @@ require(ROOT . "model/ClientModel.php");
 
 function index()
 {
-	render("student/index", array(
+	render("pages/index", array(
 		'clients' => getAllClients(),
         'patients' => getAllPatients(),
         'species' => getAllSpecies()

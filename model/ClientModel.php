@@ -36,3 +36,29 @@ function getAllSpecies()
 
     return $query->fetchAll();
 }
+
+function joinTables(){
+
+    $db = openDatabaseConnection();
+
+    $sql = "SELECT * FROM ((clients INNER JOIN patients ON clients.client_id=patients.client_id) INNER JOIN species ON patients.species_id=species.species_id)";
+    $query = $db->prepare($sql);
+    $query->execute();
+
+    $db = null;
+    return $query->fetchAll();
+
+}
+
+function joinTables2(){
+
+    $db = openDatabaseConnection();
+
+    $sql = "SELECT * FROM species ";
+    $query = $db->prepare($sql);
+    $query->execute();
+
+    $db = null;
+    return $query->fetchAll();
+
+}
