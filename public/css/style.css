@@ -1,1 +1,5 @@
-
+.td {
+    background-color: #ccc;
+    border: 0.5px #dddddd solid;
+    border-collapse: collapse;
+}
