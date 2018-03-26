@@ -1,3 +1,3 @@
 <?php
-    header('location: ' . URL . 'hospital/index' );
+    header('location: ' . URL . 'Patients/index' );
 ?>

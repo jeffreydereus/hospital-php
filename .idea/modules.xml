@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../De vloot/.idea/De vloot.iml" filepath="$PROJECT_DIR$/../De vloot/.idea/De vloot.iml" />
-      <module fileurl="file://$USER_HOME$/Documents/school/AO/les opdrachten/challenge/.idea/challenge.iml" filepath="$USER_HOME$/Documents/school/AO/les opdrachten/challenge/.idea/challenge.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/hospital-php.iml" filepath="$PROJECT_DIR$/.idea/hospital-php.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../kalender-php/.idea/kalender-php.iml" filepath="$PROJECT_DIR$/../kalender-php/.idea/kalender-php.iml" />
     </modules>
   </component>
 </project>

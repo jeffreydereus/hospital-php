@@ -1,5 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    width: 50%;
+}
+
+td, th {
+    padding: 2px;
+    display: table-cell;
+}
+
+thead {
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .td {
     background-color: #ccc;
-    border: 0.5px #dddddd solid;
     border-collapse: collapse;
+}
+
+.LiColor a {
+    color: black;
+}
+
+.None {
+    list-style: none;
 }

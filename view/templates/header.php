@@ -10,9 +10,8 @@
 <h1>Hospital</h1>
 	<nav>
         <ul>
-            <li><a href="<?= URL ?>hospital/index">Home</a></li>
-            <li><a href="<?= URL ?>hospital/patients">Patiënts</a></li>
-            <li><a href="<?= URL ?>hospital/clients">Clients</a></li>
-            <li><a href="<?= URL ?>hospital/species">Species</a></li>
+            <li class="LiColor"><a href="<?= URL ?>Patients/index">Patiënts</a></li>
+            <li class="LiColor"><a href="<?= URL ?>Clients/ClientPage">Clients</a></li>
+            <li class="LiColor"><a href="<?= URL ?>Species/SpeciesPage">Species</a></li>
         </ul>
 	</nav>

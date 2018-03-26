@@ -1,5 +1,7 @@
 <?php
 
+//Get related functions:
+
 function getAllClients()
 {
 	$db = openDatabaseConnection();
@@ -36,7 +38,6 @@ function getAllSpecies()
 
     return $query->fetchAll();
 }
-
 function joinTables(){
 
     $db = openDatabaseConnection();
@@ -50,15 +51,8 @@ function joinTables(){
 
 }
 
-function joinTables2(){
 
-    $db = openDatabaseConnection();
 
-    $sql = "SELECT * FROM species ";
-    $query = $db->prepare($sql);
-    $query->execute();
 
-    $db = null;
-    return $query->fetchAll();
 
-}
+

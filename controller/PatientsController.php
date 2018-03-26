@@ -8,7 +8,6 @@ function index()
 		'clients' => getAllClients(),
         'patients' => getAllPatients(),
         'species' => getAllSpecies(),
-        'joined' => joinTables(),
-        'joined2' => joinTables2()
+        'joined' => joinTables()
 	));
 }
