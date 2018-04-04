@@ -51,7 +51,23 @@ function joinTables(){
 
 }
 
+function Sortedtables($sid){
 
+    $db = openDatabaseConnection();
+
+    $sql = "SELECT * FROM ((clients INNER JOIN patients ON clients.client_id=patients.client_id) INNER JOIN species ON patients.species_id=species.species_id) WHERE species.species_id = $sid";
+    $query = $db->prepare($sql);
+    $query->execute();
+
+    $db = null;
+    return $query->fetchAll();
+
+}
+
+function species_create(){
+    $db = openDatabaseConnection();
+    $sql = "INSERT INTO species (species_description)"
+}
 
 
 

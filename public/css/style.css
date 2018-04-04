@@ -35,3 +35,7 @@ thead {
 .None {
     list-style: none;
 }
+
+a {
+    color: black;
+}
