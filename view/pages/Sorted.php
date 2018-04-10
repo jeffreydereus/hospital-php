@@ -16,9 +16,10 @@
 
         foreach ($joined as $patient => $Pvalue){
 
-            echo "<tr><td class=\"td\">" .$Pvalue['patient_name'] . "</td> <td class=\"td\">" . $Pvalue['species_description'] . "</td> <td class=\"td\">" . $Pvalue['patient_status'] .  "</td> <td class=\"td\">" . $Pvalue['client_firstname'] . " " . $Pvalue['client_lastname'] .  "</td></tr>";
+            echo "<tr><td class=\"td\">" .$Pvalue['patient_name'] . "</td> <td class=\"td\">" . $Pvalue['species_description'] . "</td> <td class=\"td\">" . $Pvalue['patient_status'] .  "</td> <td class=\"td\">" . $Pvalue['client_firstname'] . " " . $Pvalue['client_lastname'] . "</td></tr>";
         }
         ?>
 </tbody>
 </table>
+
 </div>

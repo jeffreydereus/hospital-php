@@ -70,5 +70,14 @@ function species_create(){
 }
 
 
+function species_delete($Sid){
+    $db = openDatabaseConnection();
+    $sql = "DELETE FROM species WHERE species_id = $Sid";
+    $query = $db->prepare($sql);
+    $query->execute();
+    $db = null;
+    //header('location:' . URL . "patients/index");
+    return;
+}
 
 
