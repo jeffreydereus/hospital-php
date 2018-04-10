@@ -11,3 +11,4 @@ function index()
         'joined' => joinTables()
 	));
 }
+

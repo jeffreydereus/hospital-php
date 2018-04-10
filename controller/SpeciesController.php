@@ -20,6 +20,12 @@ function Sorted($sid)
     ));
 }
 
+function screate(){
+    render("pages/screate");
+}
+
+
 function create(){
-    Species_create();
+    $desc = $_POST["species_desc"];
+    Species_create($desc);
 }
