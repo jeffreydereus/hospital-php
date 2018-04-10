@@ -101,5 +101,14 @@ function editPatient($Pname, $Pstatus, $PGender, $Pid, $Cid){
     return;
 }
 
+function species_delete($Sid){
+    $db = openDatabaseConnection();
+    $sql = "DELETE FROM species WHERE species_id = $Sid";
+    $query = $db->prepare($sql);
+    $query->execute();
+    $db = null;
+    //header('location:' . URL . "patients/index");
+    return;
+}
 
 
