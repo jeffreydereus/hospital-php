@@ -20,10 +20,12 @@ function Sorted($sid)
     ));
 }
 
+function screate(){
+    render("pages/screate");
+}
+
+
 function create(){
-<<<<<<< Updated upstream
-    Species_create();
-=======
     $desc = $_POST["species_desc"];
     Species_create($desc);
 }
@@ -36,5 +38,4 @@ function changeSpecie($Sid){
     render("pages/changespecie", array(
         'sid' => $Sid
     ));
->>>>>>> Stashed changes
 }
