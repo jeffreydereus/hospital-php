@@ -1,7 +1,8 @@
+<h1>Dier soorten</h1>
+
 <?php
-/**
- * Created by PhpStorm.
- * User: Asus
- * Date: 26-3-2018
- * Time: 12:02
- */
+$page = "species/screate";
+foreach ($species as $specie => $value){
+ echo "<h4><a href =" . URL . "species/Sorted/" . $value["species_id"] . ">". $value['species_description'] . "</a> <a class='red' href=" . URL . "species/delete/" . $value['species_id'] . ">x</a></h4><br>";
+};
+?>
