@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Goede php/.idea/Goede php.iml" filepath="$PROJECT_DIR$/../Goede php/.idea/Goede php.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/hospital-php.iml" filepath="$PROJECT_DIR$/.idea/hospital-php.iml" />
       <module fileurl="file://$PROJECT_DIR$/../kalender-php/.idea/kalender-php.iml" filepath="$PROJECT_DIR$/../kalender-php/.idea/kalender-php.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../madlibs-php/.idea/madlibs-php.iml" filepath="$PROJECT_DIR$/../madlibs-php/.idea/madlibs-php.iml" />
     </modules>
   </component>
 </project>

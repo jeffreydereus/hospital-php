@@ -138,15 +138,50 @@ function CreatePatientInDB($Data){
 
 function SaveClientToDB($data){
     $db = openDatabaseConnection();
-    $sql = "INSERT INTO clients (client_firstname, client_lastname) VALUES (:firstname, :lastname)";
+    $sql = "INSERT INTO clients (client_firstname, client_lastname, Email, Phone) VALUES (:firstname, :lastname, :email, :Phone)";
     $query = $db->prepare($sql);
     $query->bindParam(':firstname', $data[0], PDO::PARAM_STR);
     $query->bindParam(':lastname', $data[1], PDO::PARAM_STR);
+    $query->bindParam(':email', $data[2], PDO::PARAM_STR);
+    $query->bindParam(':Phone', $data[3], PDO::PARAM_INT);
+
     $query->execute();
     $db = null;
     header('location:' . URL . "clients/clientpage");
     return;
 }
 
+function DeleteClientInDB($CID){
+    $db = openDatabaseConnection();
+    $sql = "DELETE FROM clients WHERE client_id = $CID";
+    $query = $db->prepare($sql);
+    $query->execute();
+    $db = null;
+    header('location:' . URL . "clients/clientpage");
+    return;
+}
+
+function GetClientInfo($CID){
+    $db = openDatabaseConnection();
+    $sql = "SELECT * FROM clients WHERE client_id = $CID";
+    $query = $db->prepare($sql);
+    $query->execute();
+    $db = null;
+    return $query->fetchAll();
+}
+
+function UpdateClientInDB($data, $CID){
+    $db = openDatabaseConnection();
+    $sql = "UPDATE clients SET client_firstname = :CFname, client_lastname = :CLname, Email = :email, Phone = :phone WHERE client_id = $CID";
+    $query = $db->prepare($sql);
+    $query->bindParam(':CFname', $data[0], PDO::PARAM_STR);
+    $query->bindParam(':CLname', $data[1], PDO::PARAM_STR);
+    $query->bindParam(':email', $data[2], PDO::PARAM_STR);
+    $query->bindParam(':phone', $data[3], PDO::PARAM_INT);
+    $query->execute();
+    $db = null;
+    header('location:' . URL . "clients/clientpage");
+    return;
+}
 
 

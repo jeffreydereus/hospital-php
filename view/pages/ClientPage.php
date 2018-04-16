@@ -9,6 +9,12 @@
                     Achternaam
                 </th>
                 <th>
+                    E-mail
+                </th>
+                <th>
+                    Telefoon nummer
+                </th>
+                <th>
                     Actions
                 </th>
             </tr>
@@ -17,7 +23,7 @@
             <?php
             $page = 'clients/ClientCreationPage';
             foreach ($clients as $item => $value){
-                echo "<tr><td class='td'>" . $value["client_firstname"] . "</td><td class='td'>" . $value["client_lastname"] . "</td></tr>";
+                echo "<tr><td class='td'>" . $value["client_firstname"] . "</td><td class='td'>" . $value["client_lastname"] . "</td><td class='td'>" . $value["Email"] . "</td><td class='td'>" . $value["Phone"] . "</td><td class='td'><a href=" . URL . "clients/delete/". $value["client_id"] . ">Delete</a> <a href=" . URL . "clients/editPage/" . $value["client_id"] . ">Edit</a></td></tr>";
             }
 
 
