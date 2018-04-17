@@ -34,8 +34,13 @@ function delete($Sid){
     species_delete($Sid);
 }
 
-function changeSpecie($Sid){
+function changeSpecie($SID){
     render("pages/changespecie", array(
-        'sid' => $Sid
+        'species' => getSpecieInfo($SID)
     ));
+}
+
+function saveToDB($SID){
+    $Data = array($_POST["Sdesc"], $SID);
+    UpdateSpecieInDB($Data);
 }

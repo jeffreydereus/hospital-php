@@ -1,5 +1,5 @@
 <div class="container">
-	<table>
+	<table class="tablesorter">
         <thead>
             <tr>
                 <th>Name</th>

@@ -10,5 +10,14 @@ if ($page == "edit"){
 ?>
 
 
+<script>
+    $(document).ready(function()
+        {
+            $(".tablesorter").tablesorter();
+        }
+    );
+</script>
+
+
 </body>
 </html> 

@@ -184,4 +184,24 @@ function UpdateClientInDB($data, $CID){
     return;
 }
 
+function getSpecieInfo($SID){
+    $db = openDatabaseConnection();
+    $sql = "SELECT * FROM species WHERE species_id = $SID";
+    $query = $db->prepare($sql);
+    $query->execute();
+    $db = null;
+    return $query->fetchAll();
+}
 
+
+function UpdateSpecieInDB($Data){
+    $db = openDatabaseConnection();
+    $sql = "UPDATE species SET species_description = :sdesc WHERE species_id = :SID";
+    $query = $db->prepare($sql);
+    $query->bindParam(':sdesc', $Data[0], PDO::PARAM_STR);
+    $query->bindParam(':SID', $Data[1], PDO::PARAM_INT);
+    $query->execute();
+    $db = null;
+    header('location:' . URL . "species/speciespage");
+    return;
+}

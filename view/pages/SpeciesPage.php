@@ -1,8 +1,23 @@
 <h1>Dier soorten</h1>
 
+
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Specie</th>
+        <th>Action</th>
+    </tr>
+
+    </thead>
+    <tbody>
+
 <?php
 $page = "species/screate";
 foreach ($species as $specie => $value){
- echo "<h4><a href =" . URL . "species/Sorted/" . $value["species_id"] . ">". $value['species_description'] . "</a> <a class='red' href=" . URL . "species/delete/" . $value['species_id'] . ">x</a></h4><br>";
+    echo '<tr><td class="td">' . $value['species_id'] . '</td><td class="td">' . $value['species_description'] . '</td><td class="td"><a href="' . URL . 'species/delete/' . $value["species_id"] . '">Delete</a> <a href="' . URL . 'species/changespecie/' . $value["species_id"] . '">Edit</a></td></tr>';
 };
 ?>
+
+    </tbody>
+</table>

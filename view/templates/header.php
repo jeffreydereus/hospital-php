@@ -5,6 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Studenten app</title>
 	<link rel="stylesheet" href="<?= URL ?>css/style.css">
+    <script type="text/javascript" src="<?= URL ?>js/jquery-latest.js"></script>
+    <script type="text/javascript" src="<?= URL ?>js/jquery.tablesorter.js"></script>
 </head>
 <body>
 <h1>Hospital</h1>
